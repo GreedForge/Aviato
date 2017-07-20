@@ -34,6 +34,7 @@ $(".heart").on("click", function() {
     $(".myJobsPage").removeClass("hide");
     $(this).addClass("hide");
     $(".search").removeClass("hide");
+    $(".removeAction").remove();
 });
 
 

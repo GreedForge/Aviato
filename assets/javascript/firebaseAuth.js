@@ -67,12 +67,13 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         $(".signInForm").addClass("hide");
         $("#btnLogout").removeClass("hide");
         
+        userId = firebase.auth().currentUser.uid;
         /////load myjobs cards into my jobs page
         readUserData(userId);
+        $(".removeAction").remove();
 
 
-
-    userId = firebase.auth().currentUser.uid;
+    
     var user = firebase.auth().currentUser;
     if (user) {
         console.log("user exists write some stuff");
